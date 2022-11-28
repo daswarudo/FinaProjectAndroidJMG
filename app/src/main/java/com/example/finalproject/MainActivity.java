@@ -19,23 +19,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button b01 = findViewById(R.id.button);
-        //b01.setOnClickListener(this);
-    }
-
-    //@Override
-    public void onClick(View view){
-        /*EditText x = (EditText) findViewById(R.id.log_user);
+        EditText x = (EditText) findViewById(R.id.log_user);
         EditText y = (EditText) findViewById(R.id.log_pw);
         String usrStr = x.getText().toString();
         String pwStr = y.getText().toString();
+        Button b01 = findViewById(R.id.button);
+        b01.setOnClickListener(new View.OnClickListener()
+                               {
+                                   @Override
+                                   public void onClick(View view)
+                                   {
+                                       Toast t= Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_SHORT);
+                                       t.show();
 
-        switch(view.getId())
-        {
-            case R.id.button:
-                Toast t= Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_SHORT);
-                t.show();
-                break;
-        }*/
+                                   }
+                               }
+
+        );
+
+
     }
+
 }
